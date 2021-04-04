@@ -29,6 +29,7 @@ const Home = () => {
         <GS.PageContainer>
             <C.Logo />
             <C.TodoContainer userId={userId} todos={todos} />
+            <C.Footer />
         </GS.PageContainer>
     )
 }

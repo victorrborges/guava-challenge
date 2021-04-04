@@ -2,10 +2,11 @@ import styled from "styled-components";
 import { ResponsiveContainer } from "../../assets/GlobalStyles";
 
 export const Container = styled(ResponsiveContainer)`
-  margin: 5vh 20px 10vh;
+  margin: 5vh 20px 2vh;
   min-height: 150px;
   max-width: 800px;
   min-width: 320px;
+  width: 90%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
