@@ -1,11 +1,11 @@
 import * as S from "./styles";
 
-const TodoText = ({ text }) => {
+const TodoText = ({ done, text }) => {
 
     return (
 
         <S.Container>
-            <S.Text> {text} </S.Text>
+            <S.Text done={done}> {text} </S.Text>
         </S.Container>
 
     )

@@ -13,12 +13,15 @@ export const PageContainer = styled.div`
   justify-content: flex-start;
   background: url(${pipe}) no-repeat 8vw 30vh, url(${plant}) no-repeat left 83vw bottom 10vh, linear-gradient(180deg, #DDE3E9 175px, #FFFFFF 175px);
   padding-bottom: 5vw;
+
+  @media (max-width: 1150px) {
+    background: linear-gradient(180deg, #DDE3E9 175px, #FFFFFF 175px);
+  }
 `;
 
 export const ResponsiveContainer = styled.div`
   margin: 0 auto;
   padding: 0 15px;
-  width: 100%;
   position: relative;
 
   @media (min-width: 480px) {

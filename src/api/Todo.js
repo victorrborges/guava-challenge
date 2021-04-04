@@ -24,8 +24,15 @@ export const addTodo = (userId, text) => {
     });
 };
 
-export const editTodo = (todoid, todoText) => {
-    db.collection("todos").doc(todoid).update({
+export const editTodoStatus = (todoId, done) => {
+    db.collection("todos").doc(todoId).update({
+        done: done,
+        lastModificationDate: + new Date()
+    });
+}
+
+export const editTodo = (todoId, todoText) => {
+    db.collection("todos").doc(todoId).update({
         text: todoText,
         lastModificationDate: + new Date()
     });

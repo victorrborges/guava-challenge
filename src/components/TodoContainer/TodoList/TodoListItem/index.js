@@ -1,9 +1,9 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
-import { editTodo, deleteTodo } from '../../../../api/Todo';
+import { editTodo, deleteTodo, editTodoStatus } from "../../../../api/Todo";
 import TodoInfo from "./TodoInfo";
-import * as C from '../../..';
-import * as S from './styles';
+import * as C from "../../..";
+import * as S from "./styles";
 
 const TodoListItem = ({ todo }) => {
     const [editMode, setEditMode] = useState(false);
@@ -14,6 +14,7 @@ const TodoListItem = ({ todo }) => {
     }, [editMode, todo, reset])
 
     const onSubmit = (data) => {
+        if (!data.text || data.text.trim() === '') return;
         editTodo(todo.id, data.text);
         setEditMode(false);
     };
@@ -21,7 +22,7 @@ const TodoListItem = ({ todo }) => {
     return (
         <S.Container>
             {!editMode && 
-                <TodoInfo todo={todo} editMode={editMode} setEditMode={setEditMode} deleteTodo={deleteTodo} />
+                <TodoInfo todo={todo} editMode={editMode} setEditMode={setEditMode} deleteTodo={deleteTodo} editTodoStatus={editTodoStatus} />
             }
             {editMode &&
                 <C.TodoInput onSubmit={handleSubmit(onSubmit)} register={register} setEditMode={setEditMode} />

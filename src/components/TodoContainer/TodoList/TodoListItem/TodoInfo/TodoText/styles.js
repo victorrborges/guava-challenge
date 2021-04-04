@@ -10,4 +10,8 @@ export const Text = styled.div`
   font-size: 16px;
   line-height: 19px;
   margin: auto 0;
+
+  ${({ done }) => done && `
+    text-decoration: line-through;
+  `}
 `;

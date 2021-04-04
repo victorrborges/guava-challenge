@@ -10,15 +10,3 @@ export const Container = styled.div`
     background-color: #F2F2F2;
   }
 `;
-
-export const TextContainer = styled.div`
-  display: flex;
-  min-height: 30px;
-  width: -webkit-fill-available;
-`;
-
-export const Text = styled.div`
-  font-size: 16px;
-  line-height: 19px;
-  margin: auto 0;
-`;
