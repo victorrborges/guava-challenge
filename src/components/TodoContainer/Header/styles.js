@@ -20,4 +20,8 @@ export const Image = styled.img`
   width: 50%;
   margin: 30px auto 28px;
   display: block;
+
+  @media screen and (max-width: 725px) {
+    width: 65%;
+  }
 `;

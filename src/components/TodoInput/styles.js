@@ -8,7 +8,11 @@ export const Form = styled.form`
 `;
 
 export const Input = styled.input`
+  border-top: none;
+  border-left: none;
+  border-right: none;
   border-bottom: 1px solid rgba(25, 24, 71, 0.4);
+  border-radius: 0;
   height: 30px;
   width: -webkit-fill-available;
   font-size: 16px;
